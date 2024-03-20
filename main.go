@@ -35,7 +35,7 @@ func main() {
 	fmt.Printf("poll response: %+v", resp)
 
 	// cleanup
-	d := tasks.DestroyRequest([]string{step1ID, step2ID}, stageID)
+	d := tasks.DestroyRequest(stageID)
 	err = tasks.HandleDestroy(d)
 	if err != nil {
 		panic(err)
