@@ -17,13 +17,9 @@ var (
 )
 
 type setupRequest struct {
-	ID               string            `json:"id"` // stage runtime ID
-	PoolID           string            `json:"pool_id"`
-	Tags             map[string]string `json:"tags"`
-	CorrelationID    string            `json:"correlation_id"`
-	LogKey           string            `json:"log_key"`
-	InfraType        string            `json:"infra_type"`
-	api.SetupRequest `json:"setup_request"`
+	ID     string `json:"id"` // stage runtime ID
+	LogKey string `json:"log_key"`
+	api.SetupRequest
 }
 
 // setupRequest(id) creates a Request object with the given id.
